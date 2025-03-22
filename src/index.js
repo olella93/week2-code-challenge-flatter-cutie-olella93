@@ -12,3 +12,10 @@ function createCharacterSpan(character) {
     span.addEventListener("click", () => displayCharacter(character));
     document.getElementById("character-bar").appendChild(span);
 }
+
+function displayCharacter(character) {
+    document.getElementById("name").textContent = character.name;
+    document.getElementById("image").src = character.image;
+    document.getElementById("image").alt = character.name;
+    document.getElementById("vote-count").textContent = character.votes;
+}
