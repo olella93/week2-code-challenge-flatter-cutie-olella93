@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    fetch("http://localhost:3000/characters")
+    fetch("https://flatter-cuties-db.vercel.app/characters")
     .then(response => response.json())
     .then(characters => {
         characters.forEach(character => createCharacterSpan(character));
