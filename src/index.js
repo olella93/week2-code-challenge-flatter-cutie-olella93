@@ -30,4 +30,17 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         document.getElementById("votes").value = "";
     });
+
+    //reset votes
+    const resetButton = document.getElementById("reset-btn");
+    resetButton.addEventListener("click", () => {
+        const voteCount = document.getElementById("vote-count");
+        voteCount.textContent = "0";
+
+        //clear input field
+        const voteInput = document.getElementById("votes");
+        voteInput.value = "";
+
+        alert("Votes have been reset!");
+    })
 });
